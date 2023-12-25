@@ -1,0 +1,43 @@
+<!-- adicionar_tarefa.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Tarefa</title>
+</head>
+<body>
+    <h1>Lista de Tarefas_Form</h1>
+
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>
+                {% if tarefa.concluida %}
+                    <s>{{ tarefa.titulo }}</s>
+                {% else %}
+                    {{ tarefa.titulo }}
+                {% endif %}
+                [<a href="{% url 'completar_tarefa' tarefa.id %}">Concluir</a>]
+                [<a href="{% url 'deletar_tarefa' tarefa.id %}">Deletar</a>]
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Adicionar Nova Tarefa 1 </h2>
+    <!-- adicionar_tarefa.html -->
+    <form method="post" action="{% url 'adicionar_tarefa_form' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <h2>Adicionar Nova Tarefa 2 </h2>
+    <form method="post" action="{% url 'adicionar_tarefa_form' %}">
+        {% csrf_token %}
+        <label for="titulo">Nova Tarefa:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <a href="{% url 'lista_tarefas' %}">Voltar para Lista de Tarefas</a>
+</body>
+</html>

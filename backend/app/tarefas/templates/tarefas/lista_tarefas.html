@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>
+                {% if tarefa.concluida %}
+                    <s>{{ tarefa.titulo }}</s>
+                {% else %}
+                    {{ tarefa.titulo }}
+                {% endif %}
+                [<a href="{% url 'completar_tarefa' tarefa.id %}">Concluir</a>]
+                [<a href="{% url 'deletar_tarefa' tarefa.id %}">Deletar</a>]
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form method="post" action="{% url 'adicionar_tarefa' %}">
+        {% csrf_token %}
+        <label for="titulo">Nova Tarefa:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <button type="submit">Adicionar</button>
+    </form>
+</body>
+</html>
