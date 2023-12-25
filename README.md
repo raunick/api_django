@@ -1,19 +1,23 @@
-Título do Seu Projeto
-Breve descrição do seu projeto.
+# Django + Streamlit
 
-Tecnologias Utilizadas
-Django
-Streamlit
-Outras bibliotecas/frameworks...
-Como Executar
-Configuração do Ambiente Virtual
+## Tecnologias Utilizadas
+
+Django >> Backend
+
+Streamlit >> Frontend
+
+sqlite, pandas ...
+
+# Como Executar
+
+## Configuração do Ambiente Virtual
+
 ```bash
 # Instale as dependências
 pip install -r requirements.txt
 ```
-Executando o Backend (Django)
+# Executando o Backend (Django)
 ```bash
-Copy code
 # Navegue até o diretório do backend
 cd backend/
 
@@ -24,9 +28,8 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Executando o Frontend (Streamlit)
+# Executando o Frontend (Streamlit)
 ```bash
-Copy code
 # Navegue até o diretório do frontend
 cd frontend/
 
