@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Jonathon Morris",
+    "email": "ptaylor@example.org",
+    "senha": "+4vXsPwR&o",
+    "data_nascimento": "1983-01-18"
+  },
+  {
+    "nome": "Zachary Cabrera",
+    "email": "jennifer24@example.com",
+    "senha": "F*j824SpWC",
+    "data_nascimento": "1962-08-17"
+  },
+  {
+    "nome": "Kathy Brown",
+    "email": "andrew03@example.net",
+    "senha": "+&V&99!kyD",
+    "data_nascimento": "2007-09-09"
+  },
+  {
+    "nome": "Andrew Lowe",
+    "email": "deborah55@example.com",
+    "senha": "IbWFaQLh^1",
+    "data_nascimento": "2015-12-10"
+  },
+  {
+    "nome": "Alexandra Bowers",
+    "email": "gwilson@example.org",
+    "senha": "pv6KANkj4_",
+    "data_nascimento": "1938-04-30"
+  }
+]
